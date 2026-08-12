@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA6 - Registration | Deluxe Access</title>
+  <meta name="description" content="Register for GTA6 Deluxe Edition access. Limited availability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --luxury-pink: #e0115f;
+      --luxury-orange: #ff6b35;
+      --luxury-pink-dark: #b30d4c;
+      --dark-bg: #050508;
+      --navy: #0a0a12;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Montserrat', sans-serif;
+      --font-serif: 'Playfair Display', serif;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      min-height: 100vh;
+      background: url('email.jpg') center/cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 18, 0.85);
+      backdrop-filter: blur(0.5px);
+      z-index: 1;
+    }
+    
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(224, 17, 95, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .register-container {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 520px;
+      padding: 3.5rem;
+      background: linear-gradient(135deg, rgba(17, 17, 24, 0.98) 0%, rgba(20, 20, 30, 0.99) 100%);
+      border: 1px solid rgba(224, 17, 95, 0.3);
+      box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.9),
+        0 0 60px rgba(224, 17, 95, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      animation: slideUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), glowPulse 4s ease-in-out infinite;
+      border-radius: 16px;
+      backdrop-filter: blur(0.8px);
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 60px rgba(224, 17, 95, 0.2); }
+      50% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9), 0 0 80px rgba(224, 17, 95, 0.35); }
+    }
+    
+    .logo-mark {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, var(--luxury-pink), var(--luxury-orange));
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(224, 17, 95, 0.5);
+      animation: float 3s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .logo-mark::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: rotate(45deg);
+      animation: shimmer 3s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .logo {
+      font-family: var(--font-display);
+      font-size: 4.5rem;
+      color: #fff;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.3rem;
+      text-align: center;
+      text-shadow: 0 0 30px rgba(224, 17, 95, 0.4);
+      position: relative;
+    }
+    
+    .logo span {
+      color: var(--luxury-pink);
+      text-shadow: 0 0 40px rgba(224, 17, 95, 0.6);
+    }
+    
+    .tagline {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--luxury-orange);
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.05em;
+      text-align: center;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    .luxury-badge {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 0.8rem 2rem;
+      background: rgba(224, 17, 95, 0.15);
+      border: 1px solid rgba(224, 17, 95, 0.4);
+      color: var(--luxury-pink);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(224, 17, 95, 0.1);
+      animation: borderPulse 2s infinite;
+    }
+    
+    @keyframes borderPulse {
+      0%, 100% { border-color: rgba(224, 17, 95, 0.4); }
+      50% { border-color: rgba(224, 17, 95, 0.8); }
+    }
+    
+    .input-group {
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+    
+    .input-group label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 0.8rem;
+      transition: color 0.3s;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1.05rem;
+      font-family: var(--font-body);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+      border-radius: 8px;
+    }
+    
+    .input-group input::placeholder {
+      color: rgba(255, 255, 255, 0.25);
+    }
+    
+    .input-group input:focus {
+      border-color: var(--luxury-pink);
+      background: rgba(224, 17, 95, 0.08);
+      box-shadow: 0 0 25px rgba(224, 17, 95, 0.15);
+    }
+    
+    .input-group:focus-within label {
+      color: var(--luxury-pink);
+    }
+    
+    .luxury-btn {
+      width: 100%;
+      padding: 1.4rem;
+      margin-top: 1rem;
+      background: linear-gradient(135deg, var(--luxury-pink), var(--luxury-orange));
+      border: none;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(224, 17, 95, 0.3);
+    }
+    
+    .luxury-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .luxury-btn:hover:not(:disabled) {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(224, 17, 95, 0.5);
+    }
+    
+    .luxury-btn:hover:not(:disabled)::before {
+      left: 100%;
+    }
+    
+    .luxury-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .divider {
+      margin: 2.5rem 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(224, 17, 95, 0.3), transparent);
+      position: relative;
+    }
+    
+    .divider::before {
+      content: '§';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(224, 17, 95, 0.5);
+      background: rgba(17, 17, 24, 1);
+      padding: 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .secure-note {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.15em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      text-transform: uppercase;
+    }
+    
+    .secure-note::before {
+      content: '🔒';
+      font-size: 1rem;
+      filter: drop-shadow(0 0 5px rgba(224, 17, 95, 0.5));
+    }
+    
+    @media (max-width: 480px) {
+      .register-container {
+        padding: 2.5rem 1.5rem;
+        max-width: 95%;
+      }
+      
+      .logo {
+        font-size: 3.5rem;
+      }
+      
+      .tagline {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <div class="logo-mark">🌇</div>
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <div class="luxury-badge">OFFICIAL DELUXE ACCESS</div>
+    </div>
+    <div class="logo">GTA<span>6</span></div>
+    <div class="tagline">The Next Generation Open-World Experience</div>
+    
+    <form id="register-form" action="loading.html" method="GET">
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" id="reg-username" name="username" placeholder="Enter name" required autocomplete="off">
+      </div>
+      
+      <div class="input-group">
+        <label>Email Address</label>
+        <input type="email" id="reg-email" name="email" placeholder="name@email.com" required autocomplete="off">
+      </div>
+      
+      <button type="submit" class="luxury-btn" id="register-btn">
+        ACCESS EVENT
+      </button>
+    </form>
+    
+    <div class="divider"></div>
+    <div class="secure-note">
+      Secure SSL Encryption
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      const btn = document.getElementById('register-btn');
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+      
+      const username = document.getElementById('reg-username').value;
+      const email = document.getElementById('reg-email').value;
+      localStorage.setItem('gtag_user', JSON.stringify({username, email}));
+    });
+  </script>
+</body>
+</html>

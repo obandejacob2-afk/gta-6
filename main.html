@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA6 | Vice City - The Next Generation Open World Experience</title>
+  <meta name="description" content="Step into a city where every street tells a story. Claim free Deluxe Edition worth $199.99.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-part1.css">
+  <link rel="stylesheet" href="styles-part2.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">ViceCity</div>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#deluxe">Deluxe</a>
+        <a href="#partners">Partners</a>
+        <a href="#access">Access</a>
+      </div>
+      <button class="nav-cta" onclick="document.getElementById('access').scrollIntoView({behavior: 'smooth'})">CLAIM NOW</button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">LIMITED EVENT</div>
+      <div class="hero-image-container reveal">
+        <img src="gcover.jpg" alt="GTA6 Key Art">
+      </div>
+      <div class="hero-text-content reveal">
+        <h1 class="hero-headline">Next Generation Open World Experience</h1>
+        <p class="hero-desc">A city where every street tells a story, every choice creates new opportunities, and every journey is shaped by individual decisions.</p>
+        <p class="hero-tagline">Welcome to Vice City</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="document.getElementById('access').scrollIntoView({behavior: 'smooth'})">ACCESS EVENT</button>
+          <button class="btn-secondary" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})">WATCH TRAILER</button>
+        </div>
+      </div>
+      <div class="scroll-hint">Scroll to explore</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="video-showcase-section reveal">
+      <div class="video-showcase-header">
+        <span class="video-showcase-label">Cinematic Experience</span>
+        <h2 class="video-showcase-title">EXCLUSIVE GAMEPLAY FOOTAGE</h2>
+        <p class="video-showcase-desc">Watch the intensity and immersion of next generation open-world adventure.</p>
+      </div>
+      
+      <div class="video-frame-container">
+        <div class="video-frame">
+          <video id="gtaVideo" poster="tcover.jpg">
+            <source src="GTA.mp4" type="video/mp4">
+          </video>
+          <div class="play-overlay" onclick="togglePlay()">
+            <div class="play-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-controls-premium reveal">
+        <div class="video-control-group">
+          <button class="control-btn pink-svg" onclick="document.getElementById('gtaVideo').play()" title="Play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <span class="control-label">Play</span>
+        </div>
+        <div class="video-control-group">
+          <button class="control-btn pink-svg" onclick="document.getElementById('gtaVideo').pause()" title="Pause">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="4" width="4" height="16" fill="currentColor"/>
+              <rect x="14" y="4" width="4" height="16" fill="currentColor"/>
+            </svg>
+          </button>
+          <span class="control-label">Pause</span>
+        </div>
+        <div class="video-control-group">
+          <button class="control-btn pink-svg" onclick="document.getElementById('gtaVideo').currentTime = 0" title="Reset">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V1L7 6L12 11V7C15.31 7 18 9.69 18 13C18 16.31 15.31 19 12 19C8.69 19 6 16.31 6 13H4C4 17.42 7.58 21 12 21C16.42 21 20 17.42 20 13C20 8.58 16.42 5 12 5Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <span class="control-label">Reset</span>
+        </div>
+        <div class="video-control-group">
+          <button class="control-btn pink-svg" onclick="toggleFullscreen()" title="Fullscreen">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 14H5V19H10V17H7V14ZM5 10H7V7H10V5H5V10ZM17 17H14V19H19V14H17V17ZM14 5V7H17V10H19V5H14Z" fill="currentColor"/>
+            </svg>
+          </button>
+          <span class="control-label">Fullscreen</span>
+        </div>
+      </div>
+      
+      <div class="video-stats">
+        <div class="stat">
+          <div class="stat-number">4K</div>
+          <div class="stat-label">Resolution</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">60FPS</div>
+          <div class="stat-label">Smooth Gameplay</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Cinematic</div>
+          <div class="stat-label">Production Quality</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section-header reveal">
+      <span class="section-label">The Experience</span>
+      <h2 class="section-title">WORLD WITHOUT LIMITS</h2>
+      <p class="section-desc">Explore a massive city filled with exciting locations, unforgettable moments, fast-paced action, and endless opportunities. Every journey differs, and every decision creates a new story.</p>
+    </div>
+    
+    <div class="features-luxury-grid reveal">
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <h3>OPEN WORLD</h3>
+        <p>Explore busy streets, hidden places, beautiful coastlines, and vibrant neighborhoods in one connected world.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <h3>VEHICLES</h3>
+        <p>Drive a wide range of vehicles built for speed, style, and exploration across the city.</p>
+      </div>
+      <div class="feature-card wide">
+        <div class="feature-num">03</div>
+        <h3>MISSIONS</h3>
+        <p>Take on exciting challenges and discover new adventures around every corner.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">04</div>
+        <h3>CUSTOMIZATION</h3>
+        <p>Build a unique style with unique outfits, vehicles, and personal upgrades.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">05</div>
+        <h3>EXPLORATION</h3>
+        <p>From peaceful beaches to lively downtown streets, there is always something new waiting to be discovered.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="event">
+    <div class="section-header reveal">
+      <span class="section-label">Limited Access</span>
+      <h2 class="section-title">LIMITED EVENT ACCESS</h2>
+      <p class="section-desc">Limited promotional event currently active.</p>
+    </div>
+    
+    <div class="event-card-luxury reveal">
+      <div class="event-progress">
+        <div class="progress-numbers">
+          <span class="claimed">1,560</span>
+          <span class="divider">/</span>
+          <span class="total">2,000</span>
+        </div>
+        <div class="progress-label">Claimed</div>
+      </div>
+      <div class="progress-bar-luxury">
+        <div class="progress-fill" style="width: 78.00%;"></div>
+      </div>
+      <div class="countdown-section">
+        <div class="countdown-label">EVENT ENDS IN:</div>
+        <div class="countdown-timer">
+          <div class="countdown-item">
+            <span class="num" id="cd-days">06</span>
+            <span class="lbl">DAYS</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="num" id="cd-hours">14</span>
+            <span class="lbl">HOURS</span>
+          </div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item">
+            <span class="num" id="cd-minutes">47</span>
+            <span class="lbl">MINS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="event-reason reveal">
+      <div class="reason-content">
+        <div class="reason-icon">📊</div>
+        <h4>CUSTOMER SERVICE IMPROVEMENT INITIATIVE</h4>
+        <p>Major industry partners are currently conducting market research to enhance customer service standards. Participation in this limited event involves completing brief partner offers to assist in this research. In exchange, participants receive full Deluxe Edition access at no cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="deluxe">
+    <div class="section-header reveal">
+      <span class="section-label">Premium Package</span>
+      <h2 class="section-title">GTAVI DELUXE EDITION</h2>
+      <p class="section-subtitle">LIMITED ACCESS EXPERIENCE</p>
+    </div>
+    
+    <div class="deluxe-container reveal">
+      <p class="deluxe-desc">Complete GTA6 adventure with exclusive content, bonus features, and premium digital rewards.</p>
+      
+      <div class="deluxe-includes">
+        <div class="include-item"><span class="check">✓</span> Full Deluxe Edition Access</div>
+        <div class="include-item"><span class="check">✓</span> Exclusive Multiplayer Content</div>
+        <div class="include-item"><span class="check">✓</span> Special Customization Items</div>
+        <div class="include-item"><span class="check">✓</span> Bonus Digital Content</div>
+      </div>
+      
+      <div class="pricing-box">
+        <div class="price-original">
+          <span class="label">Estimated Value</span>
+          <span class="amount">$199.99</span>
+        </div>
+        <div class="price-arrow">→</div>
+        <div class="price-current">
+          <span class="label">Today's Price</span>
+          <span class="amount">$0.00</span>
+        </div>
+      </div>
+      
+      <div class="verify-notice">
+        <span class="pulse-dot"></span>
+        <span>Estimated verification time: Approximately 2 minutes.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners">
+    <div class="section-header reveal">
+      <span class="section-label">Official Partners</span>
+      <h2 class="section-title">POWERED BY INDUSTRY LEADERS</h2>
+    </div>
+    
+    <div class="partners-grid reveal">
+      <div class="partner-card official">
+        <div class="partner-name">Rockstar Games</div>
+        <div class="partner-role">Official Developer</div>
+      </div>
+      <div class="partner-card official">
+        <div class="partner-name">Take-Two Interactive</div>
+        <div class="partner-role">Official Publisher</div>
+      </div>
+    </div>
+    
+    <div class="partners-sub reveal">
+      <h3>Official Access & Reward Partners</h3>
+      <p>Verification and reward opportunities are provided through trusted partner networks.</p>
+      <div class="survey-partners">
+        <div class="survey-name">LifePoints</div>
+        <div class="survey-name">Opinion Surveys</div>
+        <div class="survey-name">Research Group</div>
+        <div class="survey-name">Surveytime</div>
+        <div class="survey-name">InsightStore</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stories">
+    <div class="story-grid">
+      <div class="story-card reveal">
+        <div class="story-image">
+          <img src="p1.jpg" alt="The Open Road">
+          <div class="story-label">THE OPEN ROAD</div>
+        </div>
+        <div class="story-content">
+          <h3>Every Journey Begins With A Choice</h3>
+          <p>Some roads lead to opportunity. Others lead to adventure. Every street opens a new path, and every decision shapes the story.</p>
+        </div>
+      </div>
+      
+      <div class="story-card reverse reveal">
+        <div class="story-image">
+          <img src="p2.jpg" alt="No Easy Way Out">
+          <div class="story-label">NO EASY WAY OUT</div>
+        </div>
+        <div class="story-content">
+          <h3>Every Second Matters</h3>
+          <p>The city never slows down. Every turn, every shortcut, and every decision can change what happens next.</p>
+        </div>
+      </div>
+      
+      <div class="story-card reveal">
+        <div class="story-image">
+          <img src="p3.jpg" alt="The Other Side">
+          <div class="story-label">THE OTHER SIDE OF THE CITY</div>
+        </div>
+        <div class="story-content">
+          <h3>A Different Side Awaits</h3>
+          <p>Beyond the main line, another world filled with stunning views, quiet moments, and endless places waiting to be explored.</p>
+        </div>
+      </div>
+      
+      <div class="story-card reverse reveal">
+        <div class="story-image">
+          <img src="p4.jpg" alt="When Lines Are Drawn">
+          <div class="story-label">WHEN THE LINES ARE DRAWN</div>
+        </div>
+        <div class="story-content">
+          <h3>Every Action Has Consequences</h3>
+          <p>In a city full of opportunities and challenges, choices define the journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="community">
+    <div class="section-header reveal">
+      <span class="section-label">Global Network</span>
+      <h2 class="section-title">JOIN THE NEXT GENERATION</h2>
+      <p class="section-desc">Over 2.4m+ Players everywhere are preparing to explore the world of GTA6. Be among the first to experience what comes next.</p>
+    </div>
+    
+    <div class="community-stats reveal">
+      <div class="stat-item">
+        <span class="stat-value">2.4m+</span>
+        <span class="stat-label">Registered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">150+</span>
+        <span class="stat-label">Countries</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">50m+</span>
+        <span class="stat-label">Million</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">100km²</span>
+        <span class="stat-label">Open World</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="section-header reveal">
+      <span class="section-label">Access Verification</span>
+      <h2 class="section-title">ENTER ACCESS CODE</h2>
+      <p class="section-desc">Enter exclusive access code to continue.</p>
+    </div>
+    
+    <div class="access-luxury reveal">
+      <form id="access-form" class="code-form" onsubmit="event.preventDefault(); verifyAccess();">
+        <input type="text" id="access-code" name="access-code" value="" autocomplete="off" class="luxury-input">
+        <button type="submit" class="luxury-submit">VERIFY ACCESS</button>
+        <button type="button" class="hint-link" onclick="openHint()">Hint</button>
+      </form>
+      
+      <div id="verifying-message" class="verifying-message">
+        <div class="verify-loader"></div>
+        <p>Verifying credentials...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="notice">
+    <div class="notice-premium reveal">
+      <div class="notice-glow"></div>
+      <div class="notice-content">
+        <div class="notice-header">
+          <div class="notice-icon-wrapper">
+            <div class="notice-icon">!</div>
+            <div class="icon-ring"></div>
+          </div>
+          <h3>PARTNER VERIFICATION NOTICE</h3>
+        </div>
+        
+        <div class="notice-body">
+          <div class="notice-highlight">
+            <span class="highlight-line"></span>
+            <p class="lead-text">You are about to be redirected to one of our trusted partner pages.</p>
+          </div>
+          
+          <p>To complete your verification, simply finish a short survey and/or download a recommended app. This process usually takes only a few minutes. Once completed, you'll be able to continue.</p>
+          
+          <div class="notice-warning-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 22H22L12 2ZM12 18C11.45 18 11 17.55 11 17C11 16.45 11.45 16 12 16C12.55 16 13 16.45 13 17C13 17.55 12.55 18 12 18ZM11 14V10H13V14H11Z" fill="currentColor"/>
+            </svg>
+            <span>Do not close the browser during this process. Participation requires survey completion or promotional activity engagement.</span>
+          </div>
+          
+          <p class="thanks-text">Thanks for participating in the GTA6 promotional event.</p>
+        </div>
+        
+        <div class="notice-actions">
+          <button class="btn-premium primary" onclick="continueToPartner()">
+            <span class="btn-text">CONTINUE</span>
+            <span class="btn-shine"></span>
+          </button>
+          <button class="btn-premium secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">BACK</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">GTA<span>6</span></div>
+      <div class="footer-tagline">Built for players who love action, adventure, and exploration.</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <span class="british-flag">🇬🇧</span>
+        <span class="copyright">© 2026 GTA6. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="premium-popup" id="success-popup">
+    <div class="premium-popup-backdrop" onclick="closeSuccessPopup()"></div>
+    <div class="premium-popup-content">
+      <div class="success-animation">
+        <div class="checkmark-circle">
+          <div class="checkmark draw"></div>
+        </div>
+        <div class="sparkles">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <h3>ACCESS GRANTED</h3>
+      <p>Deluxe Edition reserved successfully.</p>
+      <div class="popup-instruction">
+        <p>Scroll down to the <strong>Notice Section</strong> below and click <span class="highlight">CONTINUE</span> to complete verification.</p>
+      </div>
+      <button class="close-popup-btn" onclick="closeSuccessPopup()">GOT IT</button>
+    </div>
+  </div>
+
+  <div class="popup-luxury" id="hint-popup" onclick="closeHintOnBackground(event)">
+    <div class="popup-content">
+      <h3>Access Hint</h3>
+      <div class="code-reveal">GTA6-LAUNCH</div>
+      <button onclick="closeHint()">CLOSE</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

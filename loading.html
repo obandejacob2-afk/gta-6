@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading | GTA6 Access</title>
+  <meta name="description" content="Access loading.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --luxury-pink: #e0115f;
+      --luxury-orange: #ff6b35;
+      --dark-bg: #050508;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      background: url('load.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 5, 8, 0.9);
+      backdrop-filter: blur(0.3px);
+      z-index: 1;
+    }
+    
+    body::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(224, 17, 95, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
+      z-index: 1;
+    }
+    
+    .loading-container {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .loader-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 3rem;
+    }
+    
+    .loader-ring {
+      position: absolute;
+      inset: 0;
+      border: 3px solid transparent;
+      border-top-color: var(--luxury-pink);
+      border-radius: 50%;
+      animation: spin 2s linear infinite;
+    }
+    
+    .loader-ring:nth-child(2) {
+      inset: 10px;
+      border-top-color: var(--luxury-orange);
+      animation: spin 2s linear infinite reverse;
+    }
+    
+    .loader-ring:nth-child(3) {
+      inset: 20px;
+      border-top-color: rgba(255, 255, 255, 0.3);
+      animation: spin 3s linear infinite;
+    }
+    
+    .loader-center {
+      position: absolute;
+      inset: 35px;
+      background: linear-gradient(135deg, var(--luxury-pink), var(--luxury-orange));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      box-shadow: 0 0 30px rgba(224, 17, 95, 0.5);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(224, 17, 95, 0.5); }
+      50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(224, 17, 95, 0.7); }
+    }
+    
+    h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      letter-spacing: 0.3em;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-shadow: 0 0 20px rgba(224, 17, 95, 0.5);
+      animation: fadeInUp 0.8s ease;
+    }
+    
+    .loading-text {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+    
+    .progress-container {
+      width: 300px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--luxury-pink), var(--luxury-orange));
+      box-shadow: 0 0 10px rgba(224, 17, 95, 0.5);
+      animation: fillProgress 10s ease-out forwards;
+      position: relative;
+      overflow: hidden;
+      width: 0%;
+    }
+    
+    .progress-bar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: shimmer 2s infinite;
+    }
+    
+    @keyframes fillProgress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    
+    @keyframes shimmer {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(100%); }
+    }
+    
+    .progress-percent {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--luxury-pink);
+      margin-top: 1rem;
+      letter-spacing: 0.1em;
+      animation: fadeInUp 0.8s ease 0.6s both;
+    }
+    
+    .continue-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1.2rem 3rem;
+      background: transparent;
+      border: 2px solid var(--luxury-pink);
+      color: var(--luxury-pink);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      transition: all 0.4s;
+      opacity: 0;
+      animation: fadeIn 0.5s 10s forwards;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .continue-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--luxury-pink), var(--luxury-orange));
+      transform: translateX(-100%);
+      transition: transform 0.4s;
+      z-index: -1;
+    }
+    
+    .continue-btn:hover {
+      color: #fff;
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(224, 17, 95, 0.4);
+    }
+    
+    .continue-btn:hover::before {
+      transform: translateX(0);
+    }
+    
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2em;
+      }
+      
+      .progress-container {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loader-wrapper">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-center">VI</div>
+    </div>
+    <h1>GTA6 ACCESS</h1>
+    <p class="loading-text">Verifying credentials...</p>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="progress-percent">0%</div>
+    <a href="main.html" class="continue-btn">Continue</a>
+  </div>
+  
+  <script>
+    let percent = 0;
+    const percentEl = document.querySelector('.progress-percent');
+    const interval = setInterval(() => {
+      percent += 1;
+      if (percent >= 100) {
+        percent = 100;
+        clearInterval(interval);
+      }
+      percentEl.textContent = percent + '%';
+    }, 100);
+    
+    setTimeout(() => {
+      window.location.href = 'main.html';
+    }, 10000);
+  </script>
+</body>
+</html>
